@@ -10,5 +10,50 @@ body{
    display: block;
 } 
 
+
+
+
+
+.postButtons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.postButtons button{
+    padding: 15px 60px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #bb3;
+    border: 0;
+    font-weight: bold;
+}
+
+.postButtons button:hover{
+    background-color: #aa1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Set a style for the rest of the elements besides the header elements on the index.html page */
                                  

@@ -1,2 +1,75 @@
 /* Set a style for all elements inside the header i.e. Sign Up button, Sign In button, 
 the title "ScriBBler" & the sub-heading below "ScriBBLer" */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo-name{
+    color: #00f;
+    font-family: 'Satisfy', cursive;
+    font-size: 32px;
+}
+.logo-tagline{
+    font-family: 'Marck Script', cursive;
+    font-size: 12px;
+}
+
+.btn-sign{
+    padding: 10px 30px;
+    margin: 0 10px;
+    border: 0;
+    background-color: #00f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-sign:hover{
+    background-color: #00d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
