@@ -28,9 +28,82 @@ body{
     border: 0;
     font-weight: bold;
 }
+.postButtons button a{
+    text-decoration: none;
+    color: #000;
+}
 
 .postButtons button:hover{
     background-color: #aa1;
+}
+
+
+.modal{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+.sign-in-up{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1.2rem;
+    background-color: #fff;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.sign-in-up h1{
+    margin: 0.8rem 0;
+    text-align: center;
+    
+    
+}
+.sign-in-up label{
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+}
+.sign-in-up input{
+    padding: 0.6rem 0.7rem;
+    width: 100%;
+    margin: 0.8rem 0;
+    background-color: #eee;
+    border: 0;
+}
+.sign-in-up input[type="button"]{
+    background-color: limegreen;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1rem;
+}
+.sign-in-up input[type="button"]:hover{
+    background-color: forestgreen;
+}
+.sign-in-up p{
+    align-self: center;
+    font-size: 12px;
+}
+.sign-in-up p span{
+    color: blue;
+    cursor: pointer;
+}
+.cross{
+    position: absolute;
+    right: 1.1rem;
+    top: 0.3rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 
