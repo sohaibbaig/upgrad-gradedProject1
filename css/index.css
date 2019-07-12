@@ -38,7 +38,56 @@ body{
 }
 
 
-
+.createPost{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 90%;
+    z-index: 1;
+    padding: 2rem;
+    margin: auto;
+}
+.createPost h1{
+    align-self: center;
+    margin-bottom: 20px;
+}
+.createPost label{
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.createPost input[type="text"]{
+    width: 50%;
+    padding: 0.6rem 0.7rem;
+    background-color: #eee;
+    border: 0;
+    font-size: 1.5rem;
+}
+.createPost textarea{
+    height: 400px;
+    width: 100%;
+    background-color: #eee;
+    font-size: 1.3rem;
+}
+.createPost input[type="button"]{
+    background-color: limegreen;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1rem;
+    border: 0;
+    padding: 1rem 5rem;
+    align-self: center;
+    margin-top: 20px;
+}
+.createPost input[type="button"]:hover{
+    background-color: forestgreen;
+}
 
 
 
