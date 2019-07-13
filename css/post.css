@@ -2,6 +2,9 @@
     font-size: 150%;
     font-family: 'Abel', sans-serif;
     font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .blogText {
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -11,9 +14,51 @@
     padding: 0px 0px 0px 10px;
     font-family: 'Niconne', cursive;
     font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.blogAuthor p{
+    margin-bottom: 30px;
 }
 .blogContent{
-
+    /*background-color: #ddd;*/
+    margin: 20px 40px;
 }
 
 /* Set a style for all the remaining elements like Like button, Edit button, Comment button and so on. */
+.post-button{
+    border: 0;
+    background-color: red;
+    color: #fff;
+    padding: 12px 24px;;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+#blogBody{
+    text-align: justify;
+}
+.like{
+    margin: 15px 0;
+}
+.commentBox{
+    width: 50%;
+    height: 100px;
+    display: block;
+}
+.post-button.comment-button{
+    margin: 15px 0 45px 0;
+}
+.commentList{
+    list-style-type: none;
+    background-color: grey;
+    padding: 20px;
+    margin: 20px 0;
+}
+.commentList li{
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 25px;
+}
+

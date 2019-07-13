@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<head>
+<html>
+    <head>
         
         <link href='..\css\post.css' rel='stylesheet' type='text/css'>
         <link href='..\css\header.css' rel='stylesheet' type='text/css'>
@@ -8,34 +9,98 @@
     <style>        
     </style>     
 </head>
-<body>
+    <body>
         <div class="header">
              <!-- Insert code for Sign Up, Sign In button here. 
                Add code for "ScriBBler" heading and the sub-heading -->
+            <div class="logo">
+                <p class="logo-name">ScriBBler</p>
+                <p class="logo-tagline">Explore, Imagine, Create</p>
+            </div>
+            <div>
+                <button class="btn-sign" onclick="showSignIn()">Sign In</button>
+                <button class="btn-sign" onclick="showSignUp()">Sign Up</button>
+            </div>
         </div>
 
-    <div class="blogContent">
-        <div id="blogTitle" class="blogTite">
-        <h id="blogTitleNew">The legacy of Jimi Hendrix</h>
-    </div>
+        <div class="blogContent">
+            <div id="blogTitle" class="blogTite">
+                <h id="blogTitleNew">The legacy of Jimi Hendrix</h>
+            </div>
 
-<div class="blogAuthor">
+            <div class="blogAuthor">
 
-    <!-- Insert code for Edit/Save button and  -->
+            <!-- Insert code for Edit/Save button and  -->
 
-    <p>Jimi</p>
-</div>
+            <p>Jimi</p>
+            <button class="post-button" id="editButton"> Edit <i class="fa fa-pencil-square-o "></i> </button>
+            <button class="post-button" style="display: none" id="saveButton"> Save <i class="fa fa-floppy-o"></i> </button>
+            </div>
 
-<div class="blogText">
-    <p id="blogBody">
-            Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz. Hendrix favored overdriven amplifiers with high volume and gain.[119] He was instrumental in developing the previously undesirable technique of guitar amplifier feedback, and helped to popularize use of the wah-wah pedal in mainstream rock.[348] He rejected the standard barre chord fretting technique used by most guitarists in favor of fretting the low 6th string root notes with his thumb.[349] He applied this technique during the beginning bars of "Little Wing", which allowed him to sustain the root note of chords while also playing melody. This method has been described as piano style, with the thumb playing what a pianist's left hand would play and the other fingers playing melody as a right hand.[350] Having spent several years fronting a trio, he developed an ability to play rhythm chords and lead lines together, giving the audio impression that more than one guitarist was performing.[351][nb 41] He was the first artist to incorporate stereophonic phasing effects in rock music recordings.[354] Holly George-Warren of Rolling Stone commented: "Hendrix pioneered the use of the instrument as an electronic sound source. Players before him had experimented with feedback and distortion, but Hendrix turned those effects and others into a controlled, fluid vocabulary every bit as personal as the blues with which he began."[3][nb 42] Aledort wrote: "In rock guitar, there are but two eras — before Hendrix and after Hendrix."
-    </p>
-</div>
+            <div class="blogText">
+            <p id="blogBody">
+                    Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz. Hendrix favored overdriven amplifiers with high volume and gain.[119] He was instrumental in developing the previously undesirable technique of guitar amplifier feedback, and helped to popularize use of the wah-wah pedal in mainstream rock.[348] He rejected the standard barre chord fretting technique used by most guitarists in favor of fretting the low 6th string root notes with his thumb.[349] He applied this technique during the beginning bars of "Little Wing", which allowed him to sustain the root note of chords while also playing melody. This method has been described as piano style, with the thumb playing what a pianist's left hand would play and the other fingers playing melody as a right hand.[350] Having spent several years fronting a trio, he developed an ability to play rhythm chords and lead lines together, giving the audio impression that more than one guitarist was performing.[351][nb 41] He was the first artist to incorporate stereophonic phasing effects in rock music recordings.[354] Holly George-Warren of Rolling Stone commented: "Hendrix pioneered the use of the instrument as an electronic sound source. Players before him had experimented with feedback and distortion, but Hendrix turned those effects and others into a controlled, fluid vocabulary every bit as personal as the blues with which he began."[3][nb 42] Aledort wrote: "In rock guitar, there are but two eras — before Hendrix and after Hendrix."
+            </p>
+            </div>
 
-    <!-- Insert code for Like button, Comment button, Comment box here-->
+        <!-- Insert code for Like button, Comment button, Comment box here-->
+            <div class="like">
+                <button class="post-button" > <i class="fa fa-thumbs-o-up"></i> Like</button>
+                <p>Be the first one to like this!</p>
+            </div>
+            <textarea placeholder="Leave a comment..." class="commentBox"></textarea>
+            <input type="button" value="Comment" class="post-button comment-button" />
+            <h3>All Comments</h3>
+            <ul class="commentList">
+                
+            </ul>
+        </div>
+        
+        
+        
+        <div class="modal" id="modalSignIn">
 
-    <script src="..\js\post.js" defer></script>
-    <script src="..\js\header.js">             
-    </script>
-    
-</body>
+            <!-- Insert code for Sign In modal here -->
+            <div class="sign-in-up">
+                <h1> Welcome Back </h1>
+                <hr>
+                <label> Username </label>
+                <input type="text" placeholder="Enter Userame" required />
+                <label> Password </label>
+                <input type="password" placeholder="Enter Password" required />
+                <input type="button" value="Sign In" />
+                <p>Not a Member? <span onclick="showSignUp()">Sign Up</span></p>
+                
+                <span class="cross" onclick="hideSign()"> &times; </span>
+            </div>
+
+        </div>
+
+        <div class="modal" id="modalSignUp">
+
+            <!-- Insert code for Sign Up modal here -->
+            <div class="sign-in-up">
+                <h1> Get Started</h1>
+                <hr>
+                <label> Full Name </label>
+                <input type="text" placeholder="Enter Full Name" required />
+                <label> Username </label>
+                <input type="text" placeholder="Enter Userame" required />
+                <label> Password </label>
+                <input type="password" placeholder="Enter Password" required />
+                <label> Confirm Password </label>
+                <input type="password" placeholder="Confirm Password" required />
+                <input type="button" value="Sign Up" />
+                
+                <span class="cross" onclick="hideSign()"> &times; </span>
+            </div>
+
+        </div>
+
+
+        <script src="..\js\post.js" defer></script>
+        <script src="..\js\header.js">             
+        </script>
+
+    </body>
+</html>
