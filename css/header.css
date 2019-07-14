@@ -53,6 +53,7 @@ the title "ScriBBler" & the sub-heading below "ScriBBLer" */
     top: 0;
     left: 0;
     display: none;
+    z-index: 1;
 }
 
 
@@ -68,7 +69,6 @@ the title "ScriBBler" & the sub-heading below "ScriBBLer" */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 1;
 }
 
 .sign-in-up h1{
@@ -88,13 +88,13 @@ the title "ScriBBler" & the sub-heading below "ScriBBLer" */
     background-color: #eee;
     border: 0;
 }
-.sign-in-up input[type="button"]{
+.sign-in-up input[type="submit"]{
     background-color: limegreen;
     cursor: pointer;
     color: #fff;
     font-size: 1.1rem;
 }
-.sign-in-up input[type="button"]:hover{
+.sign-in-up input[type="submit"]:hover{
     background-color: forestgreen;
 }
 .sign-in-up p{

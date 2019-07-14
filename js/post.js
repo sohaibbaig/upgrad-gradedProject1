@@ -1,6 +1,7 @@
 
 /********** Edit and Save Options for The Post **************/
 
+//edit part
 function editPost(e){
     //changing buttons
     e.currentTarget.style.display = 'none';
@@ -17,6 +18,9 @@ function editPost(e){
     textArea.style.fontSize = '1rem';
     
     document.querySelector('.blogText').replaceChild(textArea, para);
+    //document.querySelector('.blogText textarea').focus();
+    
+    
     
     //changing title part
     title = document.getElementById('blogTitleNew');
@@ -28,8 +32,10 @@ function editPost(e){
     input.style.fontSize = '1rem';
     input.style.width = '300px';
     document.getElementById('blogTitle').replaceChild(input, title);
+    document.querySelector('#blogTitle input').focus();
 }
 
+//save part
 function savePost(e){
     //changing button
     e.currentTarget.style.display = 'none';
@@ -59,16 +65,24 @@ document.getElementById('saveButton').addEventListener('click', savePost);
 
 /***************** Like Button *************************/
 
+var count = 1;
+
 function liked(e){
     e.currentTarget.innerHTML = `<i class="fa fa-thumbs-o-up"></i> Liked!`;
-    e.currentTarget.nextElementSibling.innerText = '1 person likes this!';
+    if (count == 1){
+        e.currentTarget.nextElementSibling.innerText = '1 person likes this!';
+        count +=1;
+    }
+    else{
+        e.currentTarget.nextElementSibling.innerText = count+' people liked this!';
+        count += 1;
+    }
 }
-
 document.querySelector('.like .post-button').addEventListener('click', liked);
 
 /*******************************************************************************/
 
-/****************** Comments *******************/
+/****************** Adding Comments *******************/
 
 function addComment(){
     let value = document.querySelector('.commentBox').value;
@@ -81,6 +95,8 @@ function addComment(){
 }
 
 document.querySelector('.post-button.comment-button').addEventListener('click', addComment);
+
+/**********************************************************************************/
 
 
 
